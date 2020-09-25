@@ -42,19 +42,21 @@
         <div class="box footer">
             <img class="image" src="/img/people-group.jpg" alt="" width="1250px" height="300px" style="float: left;">
         </div>
+    </div>
 
-        <script>
-            document.querySelectorAll('[wm-nav]').forEach(link => {
-                const conteudo = document.getElementById('conteudo')
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
 
-                link.onclick = function (e) {
-                    e.preventDefault()
-                    fetch(link.getAttribute('wm-nav'))
-                        .then(resp => resp.text())
-                        .then(html => conteudo.innerHTML = html)
-                }
-            })
-        </script>
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+
 </body>
 
 </html>
